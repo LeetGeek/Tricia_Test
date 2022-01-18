@@ -1,0 +1,35 @@
+<head>
+    <script>
+        function Test1()
+        {
+            var button = document.getElementById("butt");
+            button.innerHTML = "hi boss";
+            
+            var h1El = document.getElementById("h1Tag");
+            h1El.innerHTML = "<p>Does this work?</p>";
+        }
+    </script>
+
+    <style>
+        p {
+            font-size: small;
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    Welcome to my page
+
+    <h1 id="h1Tag">
+        this is a h1 tag
+    </h1>
+    <h2>
+        this is a h2 tag
+    </h2>
+
+    <button id="butt" onclick="Test1()">
+        click me
+    </button>
+</body>
