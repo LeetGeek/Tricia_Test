@@ -1,0 +1,42 @@
+<head>
+    <script>
+        var minutes = 12;
+        var seconds = 0;
+        
+
+        var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+        function timer()
+        {
+            if(minutes === 0 && seconds === 0) {
+                clearInterval(counter);
+                return;
+            }
+            else if(seconds === 0 && minutes > 0)
+            {
+                seconds = 59;
+                minutes -= 1;
+            }
+            else {
+                seconds -=1;
+            }
+            var mins = minutes < 10 ? '0' + minutes.toString() : minutes.toString();
+            var secs = seconds < 10 ? '0' + seconds.toString() : seconds.toString();
+            document.getElementById("timerText").innerHTML= `${mins}:${secs}`; // watch for spelling
+        }
+
+    </script>
+
+    <style>
+        #timerText {
+            font-size: medium;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+   <p id="timerText"></p>
+    <img src="img/text1.png">
+</body>
